@@ -7,11 +7,10 @@ package specialTest;
 public class charQA {
 
     /**
-     * Ki?m tra ký t? tuy?n vào có ph?i ch? cái hay s? không.
-     * @param      ký t? c
+     * Kiểm tra xem ký tự truyền vào có phải là chữ cái hoặc số hay không.
      *
-     * @return     true n?u là s? ho?c ch? cái ngu?c l?i là false.
-     *
+     * @param c đầu vào là 1 biến charactor
+     * @return trả về true nếu đúng là chữ hoặc số ngược lại là false
      */
     public static boolean IsNumberOrCharactor(char c) {
         if (c >= 48 && c <= 57 || c >= 65 && c <= 90 || c >= 97 && c <= 122) {
@@ -20,6 +19,12 @@ public class charQA {
         return false;
     }
 
+    /**
+     * Kiểm tra xem ký tự truyền vào có phải là số hay không.
+     *
+     * @param c đầu vào là 1 biến charactor
+     * @return trả về true nếu đúng là số ngược lại là false
+     */
     public static boolean IsNumber(char c) {
         if (c >= 48 && c <= 57) {
             return true;
@@ -27,6 +32,12 @@ public class charQA {
         return false;
     }
 
+    /**
+     * Kiểm tra xem ký tự truyền vào có phải là chữ cái hay không.
+     *
+     * @param c đầu vào là 1 biến charactor
+     * @return trả về true nếu đúng là chữ cái ngược lại là false
+     */
     public static boolean IsAlphabet(char c) {
         if (c >= 65 && c <= 90 || c >= 97 && c <= 122) {
             return true;
@@ -34,6 +45,12 @@ public class charQA {
         return false;
     }
 
+    /**
+     * Kiểm tra xem ký tự truyền vào có phải là chữ cái viết hoa hay không.
+     *
+     * @param c đầu vào là 1 biến charactor
+     * @return trả về true nếu đúng là chữ cái viết hoa ngược lại là false
+     */
     public static boolean IsUpper(char c) {
         if (c >= 65 && c <= 90) {
             return true;
@@ -41,6 +58,12 @@ public class charQA {
         return false;
     }
 
+    /**
+     * Kiểm tra xem ký tự truyền vào có phải là chữ cái viết thường hay không.
+     *
+     * @param c đầu vào là 1 biến charactor
+     * @return trả về true nếu đúng là chữ cái viết thường ngược lại là false
+     */
     public static boolean IsLower(char c) {
         if (c >= 97 && c <= 122) {
             return true;

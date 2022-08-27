@@ -13,10 +13,11 @@ import specialTest.stringQA;
  */
 public class test {
     public static void main(String[] args) {
-        System.out.println("eee ee ee em nhi?u ê ô ? ");
-    
-       String in = "2000-21-1";
-       in.charAt(0);
+     int a=0;
+     a=numQA.tryParseInt("0", a);
+     boolean aa;
+        System.out.println(a);
+        System.out.println(numQA.getTryParseBool());
      
     }
   

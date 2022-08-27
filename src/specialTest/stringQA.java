@@ -12,10 +12,30 @@ import java.nio.CharBuffer;
  */
 public class stringQA {
 
+    /**
+     * Các option của hàm TrimWithReplaceSpaceAndOpt JustTrimAndClearSpace chỉ
+     * cần xóa khoảng trắng hai đầu và các khoảng trắng thừa bên trong giữ các
+     * chữ cái cánh nhau 1 khoảng trắng. UpperFisrtChar xóa khoảng trắng hai đầu
+     * và các khoảng trắng thừa bên trong giữ các chữ cái cánh nhau 1 khoảng
+     * trắng và viết hoa ký tự đầu mỗi từ. ItsAName Chuẩn hóa đầu vào thành tên
+     * chuẩn.
+     */
     public static enum Opt {
         JustTrimAndClearSpace, UpperFisrtChar, ItsAName
     }
 
+    /**
+     * Chuẩn hóa một chuỗi truyền vào.
+     *
+     * @param input chuỗi cần chuẩn hóa.
+     * @param opt option chuẩn hóa.
+     * @return JustTrimAndClearSpace chỉ cần xóa khoảng trắng hai đầu và các
+     * khoảng trắng thừa bên trong giữ các chữ cái cánh nhau 1 khoảng trắng.
+     * UpperFisrtChar xóa khoảng trắng hai đầu và các khoảng trắng thừa bên
+     * trong giữ các chữ cái cánh nhau 1 khoảng trắng và viết hoa ký tự đầu mỗi
+     * từ. ItsAName Chuẩn hóa đầu vào thành tên chuẩn.
+     *
+     */
     public static String TrimWithReplaceSpaceAndOpt(String input, Opt opt) {
         input = input.trim();
         while (input.contains("  ")) {
@@ -54,6 +74,14 @@ public class stringQA {
         return "Error";
     }
 
+    /**
+     * Kiểm tra chuỗi truyền vào có viết in hoa hết hoặc viết thường hết hoặc
+     * lộn xộn.
+     *
+     * @param input chuỗi cần kiểm tra.
+     * @return trả về -1 nếu chuỗi trống. trả về 0 nếu chuỗi là chuỗi lộn xộn.
+     * trả về 1 nếu chuỗi in hoa. trả về 2 nếu là chuỗi in thường.
+     */
     public static int IsStringUpperLowerOrMix(String input) {
         if (input.trim().length() < 1) {
             return -1;
