@@ -2,19 +2,19 @@
 import caculSupport.numSupport;
 import specialTest.charQA;
 import specialTest.numQA;
+import specialTest.stringQA;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 
 /**
  *
- * @author PC
+ * @author DJXuyenChi
  */
 public class test {
     public static void main(String[] args) {
-        
+        String s ="tôi dã eyeeu ê";
+        System.out.println("tôi yêu em");
+        System.out.println(stringQA.TrimWithReplaceSpaceAndOpt(s, stringQA.Opt.ItsAName));
     }
   
 }
