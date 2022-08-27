@@ -45,13 +45,14 @@ public class numQA {
             }
         }
     }
-/**
+
+    /**
      * Ép kiểu dữ liệu từ String sang int. Nếu cần gán giá trị là biến mới khởi
      * tạo thì hãy gán bằng 0 và option hàm là false nếu thất bại sẽ trả về giá
      * trị max của int là -2147000000
      *
      * @param input đầu vào là 1 biến kiểu String chứa giá trị cần chuyển đổi.
-     * @param outInt đầu vào là 1 biến kiểu int chứa giá trị gốc của biến nhận
+     * @param outLong đầu vào là 1 biến kiểu int chứa giá trị gốc của biến nhận
      * @param opt nếu biến mới thì để false còn biến đã có giá trị sạch từ trước
      * thì để true giá trị.
      * @return Trả về giá trị mới cho biến cần nhận giá trị và thay đổi trạng
@@ -60,19 +61,79 @@ public class numQA {
      * thì tryParseBool chuyển thành false và trả lại giá trị cho biến cần
      * chuyển.
      */
-    public static float tryParseFloat(String input, float outInt, boolean opt) {
+    public static long tryParseLong(String input, long outLong, boolean opt) {
         if (IsDecimal(input)) {
             tryParseBool = true;
-            return Integer.parseInt(input);
+            return Long.parseLong(input);
         } else {
             tryParseBool = false;
             if (opt) {
-                return outInt;
+                return outLong;
             } else {
                 return -2147000000;
             }
         }
     }
+
+    /**
+     * Ép kiểu dữ liệu từ String sang float. Nếu cần gán giá trị là biến mới
+     * khởi tạo thì hãy gán bằng 0 và option hàm là false nếu thất bại sẽ trả về
+     * -999999999
+     *
+     * @param input đầu vào là 1 biến kiểu String chứa giá trị cần chuyển đổi.
+     * @param outFloat đầu vào là 1 biến kiểu int chứa giá trị gốc của biến nhận
+     * @param opt nếu biến mới thì để false còn biến đã có giá trị sạch từ trước
+     * thì để true giá trị.
+     * @return Trả về giá trị mới cho biến cần nhận giá trị và thay đổi trạng
+     * thái của tryParseBool thành true bạn có thể lấy giá trị của tryParseBool
+     * thông qua getter nhưng không thể gán và nếu không thể chuyển đổi giá trị
+     * thì tryParseBool chuyển thành false và trả lại giá trị cho biến cần
+     * chuyển.
+     */
+    public static float tryParseFloat(String input, float outFloat, boolean opt) {
+        if (IsFloatOrDouble(input)) {
+            tryParseBool = true;
+            return Float.parseFloat(input);
+        } else {
+            tryParseBool = false;
+            if (opt) {
+                return outFloat;
+            } else {
+                return -999999999;
+            }
+        }
+    }
+
+    /**
+     * Ép kiểu dữ liệu từ String sang float. Nếu cần gán giá trị là biến mới
+     * khởi tạo thì hãy gán bằng 0 và option hàm là false nếu thất bại sẽ trả về
+     * -999999999
+     *
+     * @param input đầu vào là 1 biến kiểu String chứa giá trị cần chuyển đổi.
+     * @param outDouble đầu vào là 1 biến kiểu int chứa giá trị gốc của biến
+     * nhận
+     * @param opt nếu biến mới thì để false còn biến đã có giá trị sạch từ trước
+     * thì để true giá trị.
+     * @return Trả về giá trị mới cho biến cần nhận giá trị và thay đổi trạng
+     * thái của tryParseBool thành true bạn có thể lấy giá trị của tryParseBool
+     * thông qua getter nhưng không thể gán và nếu không thể chuyển đổi giá trị
+     * thì tryParseBool chuyển thành false và trả lại giá trị cho biến cần
+     * chuyển.
+     */
+    public static double tryParseDouble(String input, double outDouble, boolean opt) {
+        if (IsFloatOrDouble(input)) {
+            tryParseBool = true;
+            return Double.parseDouble(input);
+        } else {
+            tryParseBool = false;
+            if (opt) {
+                return outDouble;
+            } else {
+                return -999999999;
+            }
+        }
+    }
+
     /**
      * Kiểm tra số truyền vào có phải số nguyên tố hay không.
      *
