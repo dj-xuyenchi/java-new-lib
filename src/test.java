@@ -1,6 +1,7 @@
 
 import caculSupport.numSupport;
 import specialTest.charQA;
+import specialTest.datetimeQA;
 import specialTest.numQA;
 import specialTest.stringQA;
 
@@ -12,9 +13,11 @@ import specialTest.stringQA;
  */
 public class test {
     public static void main(String[] args) {
-        String s ="tôi dã eyeeu ê";
-        System.out.println("tôi yêu em");
-        System.out.println(stringQA.TrimWithReplaceSpaceAndOpt(s, stringQA.Opt.ItsAName));
+        System.out.println("eee ee ee em nhi?u ê ô ? ");
+    
+       String in = "2000-21-1";
+       in.charAt(0);
+     
     }
   
 }
