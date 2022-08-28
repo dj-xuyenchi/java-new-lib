@@ -13,6 +13,7 @@ public class numQA {
      *
      * @return Kết quả của lần ép kiểu cuối cùng.
      */
+    @Deprecated
     public static boolean getTryParseBool() {
         return tryParseBool;
     }
@@ -32,6 +33,7 @@ public class numQA {
      * thì tryParseBool chuyển thành false và trả lại giá trị cho biến cần
      * chuyển.
      */
+    @Deprecated
     public static int tryParseInt(String input, int outInt, boolean opt) {
         if (IsDecimal(input)) {
             tryParseBool = true;
@@ -47,7 +49,7 @@ public class numQA {
     }
 
     /**
-     * Ép kiểu dữ liệu từ String sang int. Nếu cần gán giá trị là biến mới khởi
+     * Ép kiểu dữ liệu từ String sang long. Nếu cần gán giá trị là biến mới khởi
      * tạo thì hãy gán bằng 0 và option hàm là false nếu thất bại sẽ trả về giá
      * trị max của int là -2147000000
      *
@@ -61,6 +63,7 @@ public class numQA {
      * thì tryParseBool chuyển thành false và trả lại giá trị cho biến cần
      * chuyển.
      */
+    @Deprecated
     public static long tryParseLong(String input, long outLong, boolean opt) {
         if (IsDecimal(input)) {
             tryParseBool = true;
@@ -90,6 +93,7 @@ public class numQA {
      * thì tryParseBool chuyển thành false và trả lại giá trị cho biến cần
      * chuyển.
      */
+    @Deprecated
     public static float tryParseFloat(String input, float outFloat, boolean opt) {
         if (IsFloatOrDouble(input)) {
             tryParseBool = true;
@@ -120,6 +124,7 @@ public class numQA {
      * thì tryParseBool chuyển thành false và trả lại giá trị cho biến cần
      * chuyển.
      */
+    @Deprecated
     public static double tryParseDouble(String input, double outDouble, boolean opt) {
         if (IsFloatOrDouble(input)) {
             tryParseBool = true;

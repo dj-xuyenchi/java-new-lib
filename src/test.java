@@ -1,5 +1,8 @@
 
+import Tokyo.QA.libPersonalForNumber.Dec;
+import Tokyo.QA.libPersonalForNumber.RealNumber;
 import caculSupport.numSupport;
+import java.util.Scanner;
 import specialTest.charQA;
 import specialTest.datetimeQA;
 import specialTest.numQA;
@@ -11,8 +14,10 @@ import specialTest.stringQA;
  */
 public class test {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+    private static Scanner sc = new Scanner(System.in);
 
+    public static void main(String[] args) {
+        boolean b = RealNumber.TryParse(sc.nextLine());
+        System.out.println(b + "   " + RealNumber.getTryParseDoubleValue());
+    }
 }
