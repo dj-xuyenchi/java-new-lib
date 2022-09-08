@@ -17,7 +17,7 @@ public class test {
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        boolean b = RealNumber.TryParse(sc.nextLine());
-        System.out.println(b + "   " + RealNumber.getTryParseDoubleValue());
+        boolean b = Dec.TryParse(sc.nextLine());
+        System.out.println(b);
     }
 }
