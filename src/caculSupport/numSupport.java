@@ -2,7 +2,7 @@ package caculSupport;
 
 /**
  *
- * @author PC
+ * @author DJXuyenChi
  */
 public class numSupport {
 

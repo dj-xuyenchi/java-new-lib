@@ -6,7 +6,7 @@ package QA.Exception;
 
 /**
  *
- * @author PC
+ * @author DJXuyenChi
  */
 public class QADateTimeException extends Exception{
 

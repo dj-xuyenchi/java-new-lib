@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package imgSupport;
+package HaNoi.QA.libPersonalForList;
 
 /**
  *
- * @author PC
+ * @author DJXuyenChi
  */
-public class imgQA {
-
+public class ListQA {
+    
 }

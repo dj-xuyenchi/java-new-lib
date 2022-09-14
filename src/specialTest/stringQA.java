@@ -8,7 +8,7 @@ import java.nio.CharBuffer;
 
 /**
  *
- * @author nguye
+ * @author DJXuyenChi
  */
 public class stringQA {
 

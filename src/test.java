@@ -1,6 +1,6 @@
 
-import London.QA.libPersonalForDatetime.Datetime;
-import London.QA.libPersonalForDatetime.DatetimeValid;
+import London.QA.libPersonalForDatetime.DateTimeQA;
+import London.QA.libPersonalForDatetime.DateTimeValid;
 import QA.Exception.QADateTimeException;
 import Tokyo.QA.libPersonalForNumber.Dec;
 import Tokyo.QA.libPersonalForNumber.RealNumber;
@@ -21,7 +21,11 @@ public class test {
 
     private static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        System.out.println(DatetimeValid.isLeapYear(2020));
+    public static void main(String[] args) throws QADateTimeException {
+        
+            DateTimeQA a = new DateTimeQA(15, 9, 2000);
+            DateTimeQA b = new DateTimeQA(1, 8, 2022);
+            System.out.println(DateTimeQA.DateDiff(b, a));
+      
     }
 }

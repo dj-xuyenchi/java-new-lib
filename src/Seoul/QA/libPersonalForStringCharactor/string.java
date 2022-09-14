@@ -8,7 +8,7 @@ import specialTest.stringQA;
 
 /**
  *
- * @author nguye
+ * @author DJXuyenChi
  */
 public class string extends stringQA{
     

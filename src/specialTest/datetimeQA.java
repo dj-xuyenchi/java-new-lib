@@ -6,7 +6,7 @@ package specialTest;
 
 /**
  *
- * @author nguye
+ * @author DJXuyenChi
  */
 public class datetimeQA {
     public static boolean IsDateTime(String input){

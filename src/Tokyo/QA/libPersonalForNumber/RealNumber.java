@@ -8,7 +8,7 @@ import specialTest.numQA;
 
 /**
  *
- * @author PC
+ * @author DJXuyenChi
  */
 public class RealNumber extends numQA {
 

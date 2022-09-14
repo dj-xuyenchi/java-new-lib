@@ -10,10 +10,16 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author PC
+ * @author DJXuyenChi
  */
-public class DatetimeValid {
+public class DateTimeValid {
 
+    /**
+     * Kiểm tra số truyền vào có phải là giây hợp lệ hay không.
+     *
+     * @param input đầu vào là 1 biến kiểu int cần kiểm tra.
+     * @return True nếu đúng là số giây hợp lệ và False nếu không hợp lệ.
+     */
     public static boolean checkSecond(int input) {
         if (input < 0 || input > 59) {
             return false;
@@ -21,6 +27,12 @@ public class DatetimeValid {
         return true;
     }
 
+    /**
+     * Kiểm tra số truyền vào có phải là phút hợp lệ hay không.
+     *
+     * @param input đầu vào là 1 biến kiểu int cần kiểm tra.
+     * @return True nếu đúng là số phút hợp lệ và False nếu không hợp lệ.
+     */
     public static boolean checkMinute(int input) {
         if (input < 0 || input > 59) {
             return false;
@@ -28,6 +40,12 @@ public class DatetimeValid {
         return true;
     }
 
+    /**
+     * Kiểm tra số truyền vào có phải là giờ hợp lệ hay không.
+     *
+     * @param input đầu vào là 1 biến kiểu int cần kiểm tra.
+     * @return True nếu đúng là số giờ hợp lệ và False nếu không hợp lệ.
+     */
     public static boolean checkHour(int input) {
         if (input < 0 || input > 23) {
             return false;
@@ -35,6 +53,12 @@ public class DatetimeValid {
         return true;
     }
 
+    /**
+     * Kiểm tra số truyền vào có phải là năm hợp lệ hay không.
+     *
+     * @param input đầu vào là 1 biến kiểu int cần kiểm tra.
+     * @return True nếu đúng là số năm hợp lệ và False nếu không hợp lệ.
+     */
     public static boolean checkYear(int input) {
         if (input < 1) {
             return false;
@@ -42,6 +66,12 @@ public class DatetimeValid {
         return true;
     }
 
+    /**
+     * Kiểm tra số truyền vào có phải là tháng hợp lệ hay không.
+     *
+     * @param input đầu vào là 1 biến kiểu int cần kiểm tra.
+     * @return True nếu đúng là số tháng hợp lệ và False nếu không hợp lệ.
+     */
     public static boolean checkMonth(int input) {
         if (input < 1 || input > 12) {
             return false;
@@ -49,6 +79,14 @@ public class DatetimeValid {
         return true;
     }
 
+    /**
+     * Kiểm tra số truyền vào có phải là ngày hợp lệ hay không.
+     *
+     * @param day đầu vào là ngày.
+     * @param month đầu vào là tháng.
+     * @param year đầu vào là năm.
+     * @return True nếu đúng là số ngày hợp lệ và False nếu không hợp lệ.
+     */
     public static boolean checkDay(int day, int month, int year) {
 
         if (!checkYear(year) || !checkMonth(month)) {
@@ -93,6 +131,12 @@ public class DatetimeValid {
         return true;
     }
 
+    /**
+     * Kiểm tra số truyền vào có phải là năm nhuận hay không.
+     *
+     * @param year đầu vào là năm.
+     * @return True nếu đúng là năm nhuận và False nếu không phải.
+     */
     public static boolean isLeapYear(int year) {
         checkYear(year);
         if (year % 400 == 0 || year % 4 == 0 && year % 100 != 1) {
