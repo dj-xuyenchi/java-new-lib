@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="DJXuyenChi">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/DJXuyenChi/DJXuyenChi.ver1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DJXuyenChi/DJXuyenChi.ver2.0 jre11.0.16-Zulu.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DJXuyenChi/DJXuyenChi.ver1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DJXuyenChi/DJXuyenChi.ver1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/DJXuyenChi/DJXuyenChi.ver1.3 jre11.0.16-Zulu.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
