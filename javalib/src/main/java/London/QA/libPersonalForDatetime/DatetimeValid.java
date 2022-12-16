@@ -12,7 +12,7 @@ import java.util.logging.Logger;
  *
  * @author DJXuyenChi
  */
-public class DateTimeValid {
+public class DatetimeValid {
 
     /**
      * Kiểm tra số truyền vào có phải là giây hợp lệ hay không.

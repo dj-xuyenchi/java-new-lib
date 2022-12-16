@@ -42,7 +42,7 @@ public class DateTimeQA {
      * @param year năm.
      */
     public DateTimeQA(int day, int month, int year) throws QADateTimeException {
-        if (!DateTimeValid.checkYear(year) || !DateTimeValid.checkMonth(month) || !DateTimeValid.checkDay(day, month, year)) {
+        if (!DatetimeValid.checkYear(year) || !DatetimeValid.checkMonth(month) || !DatetimeValid.checkDay(day, month, year)) {
             throw new QADateTimeException(error);
         }
         this.day = day;
@@ -61,7 +61,7 @@ public class DateTimeQA {
      * @param hour giờ.
      */
     public DateTimeQA(int day, int month, int year, int second, int minute, int hour) throws QADateTimeException {
-        if (!DateTimeValid.checkYear(year) || !DateTimeValid.checkMonth(month) || !DateTimeValid.checkDay(day, month, year) || !DateTimeValid.checkSecond(second) || !DateTimeValid.checkMinute(minute) || !DateTimeValid.checkHour(hour)) {
+        if (!DatetimeValid.checkYear(year) || !DatetimeValid.checkMonth(month) || !DatetimeValid.checkDay(day, month, year) || !DatetimeValid.checkSecond(second) || !DatetimeValid.checkMinute(minute) || !DatetimeValid.checkHour(hour)) {
             throw new QADateTimeException(error);
         }
         this.day = day;
@@ -137,17 +137,17 @@ public class DateTimeQA {
         int inputYear = input.getYear() -1;
         while (inputYear > 0) {
             inputYear--;
-            if (DateTimeValid.isLeapYear(inputYear)) {
+            if (DatetimeValid.isLeapYear(inputYear)) {
                 totalDay += 356;
             } else {
                 totalDay += 355;
             }
         }
         for (int i = 1; i < input.getMonth(); i++) {
-            if (i == 2 && DateTimeValid.isLeapYear(input.getYear())) {
+            if (i == 2 && DatetimeValid.isLeapYear(input.getYear())) {
                 totalDay += 29;
             }
-            if (i == 2 && !DateTimeValid.isLeapYear(input.getYear())) {
+            if (i == 2 && !DatetimeValid.isLeapYear(input.getYear())) {
                 totalDay += 28;
             }
             if (i == 4 || i == 6 || i == 9 || i == 11) {
