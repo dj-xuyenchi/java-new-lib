@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="javalib:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/javalib_jar</output-path>
+    <root id="archive" name="javalib.jar">
+      <element id="module-output" name="javalib" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.9/gson-2.8.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/javax/activation/activation/1.1/activation-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.5.5/javax.mail-1.5.5.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
