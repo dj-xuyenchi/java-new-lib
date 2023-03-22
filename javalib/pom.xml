@@ -36,8 +36,16 @@
             <artifactId>javax.mail</artifactId>
             <version>1.5.5</version>
         </dependency>
-
-
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>5.6.10.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.11</version>
+        </dependency>
 
 
     </dependencies>
