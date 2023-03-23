@@ -1,9 +1,13 @@
 
 
 
+import Seoul.QA.HibernateCustom.Context;
 import Seoul.QA.HibernateCustom.DongVat;
+import Seoul.QA.HibernateCustom.OptionConfig;
 import Seoul.QA.HibernateCustom.Repository;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 
@@ -12,22 +16,15 @@ import java.util.Scanner;
  */
 public class test {
 
-    private static Scanner sc = new Scanner(System.in);
-
     public static void main(String[] args) {
 
-        Repository<DongVat> re = new Repository<>(DongVat.class);
-//        for(DongVat dv : re.findAll()){
-//            System.out.println(dv.getTen());
-//        }
-
-        System.out.println(DongVat.class.getSimpleName());
-
-
-
-
-
-//        EmailMix e = new EmailMix("do.quanganh99zz@gmail.com", "xqwcfhvbxjomokjb", 2);
-//        e.sendContentToVer2("anhdqph19418@fpt.edu.vn", "â", "â");
+        Context con = new Context(OptionConfig.MYSQL, "localhost", "test1", "root", "1231234",
+                new ArrayList<Class<?>>(Arrays.asList(DongVat.class)));
+        DongVat dvNew = new DongVat();
+        dvNew.setTen("Xuyen Chi");
+        con.getDongVat().save(dvNew);
+        for (DongVat dv : con.getDongVat().findAll()) {
+            System.out.println(dv.getTen());
+        }
     }
 }
