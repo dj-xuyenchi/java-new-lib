@@ -11,28 +11,38 @@ import java.util.Properties;
 
 public class HibernateContext {
     private static SessionFactory FACTORY;
+    private String database;
+    private String databaseName;
+    private String user;
+    private String pass;
+    private OptionConfig option;
+    private List<Class<?>> listClass;
+
+    public void config() {
+    }
 
     public static SessionFactory getSessionFactory() {
         return FACTORY;
     }
 
-    public HibernateContext(OptionConfig option, String database, String databaseName, String user, String pass, List<Class<?>> listClass) {
+    public HibernateContext() {
+        config();
         switch (option) {
             case MYSQL:
-                configMySQL(database, databaseName, user, pass, listClass);
+                configMySQL();
                 break;
             case SQLSERVER:
-                configSQLServer(database, databaseName, user, pass, listClass);
+                configSQLServer();
                 break;
         }
     }
 
-    private static void configSQLServer(String database, String databaseName, String user, String pass, List<Class<?>> listClass) {
+    private void configSQLServer() {
         Configuration conf = new Configuration();
         Properties prop = new Properties();
         prop.put(Environment.DIALECT, "org.hibernate.dialect.SQLServerDialect");
         prop.put(Environment.DRIVER, "com.microsoft.sqlserver.jdbc.SQLServerDriver");
-        prop.put(Environment.URL, "jdbc:sqlserver://" + database + ";" + "database=" + ";encrypt=true;trustservercertificate=true;");
+        prop.put(Environment.URL, "jdbc:sqlserver://" + database + ":1433;" + "database=" + databaseName + ";encrypt=true;trustservercertificate=true;");
         prop.put(Environment.USER, user);
         prop.put(Environment.PASS, pass);
         conf.setProperties(prop);
@@ -43,7 +53,7 @@ public class HibernateContext {
         FACTORY = conf.buildSessionFactory(sr);
     }
 
-    private static void configMySQL(String database, String databaseName, String user, String pass, List<Class<?>> listClass) {
+    private void configMySQL() {
         Configuration conf = new Configuration();
         Properties prop = new Properties();
         prop.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
@@ -57,5 +67,33 @@ public class HibernateContext {
         }
         ServiceRegistry sr = new StandardServiceRegistryBuilder().applySettings(conf.getProperties()).build();
         FACTORY = conf.buildSessionFactory(sr);
+    }
+
+    public static void setFACTORY(SessionFactory FACTORY) {
+        HibernateContext.FACTORY = FACTORY;
+    }
+
+    public void setDatabase(String database) {
+        this.database = database;
+    }
+
+    public void setDatabaseName(String databaseName) {
+        this.databaseName = databaseName;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
+    }
+
+    public void setOption(OptionConfig option) {
+        this.option = option;
+    }
+
+    public void setListClass(List<Class<?>> listClass) {
+        this.listClass = listClass;
     }
 }

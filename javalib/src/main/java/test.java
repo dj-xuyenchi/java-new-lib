@@ -18,8 +18,7 @@ public class test {
 
     public static void main(String[] args) {
 
-        Context con = new Context(OptionConfig.MYSQL, "localhost", "test1", "root", "1231234",
-                new ArrayList<Class<?>>(Arrays.asList(DongVat.class)));
+        Context con = new Context();
         DongVat dvNew = new DongVat();
         dvNew.setTen("Xuyen Chi");
         con.getDongVat().save(dvNew);
